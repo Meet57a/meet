@@ -1,4 +1,4 @@
-import React from 'react'
+
 import '../css/home.css'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -20,6 +20,8 @@ import { IconJava as JavaIcon } from '../assets/svgs/java-icon'
 import { IconDart as DartIcon } from '../assets/svgs/dart-icon'
 import { IconBxlTypescript as TypeScriptIcon } from '../assets/svgs/ts-icon'
 import { IconJavascriptFill as JavaScriptIcon } from '../assets/svgs/js-icon'
+import { useState } from 'react';
+import React from 'react';
 
 
 const style = {
@@ -140,25 +142,54 @@ const languages = [
 ]
 
 const Home = () => {
+  const [result, setResult] = React.useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "bda9a88d-afc0-4a36-a003-eeddfcdc8d73");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
   return (
     <div className='home'>
       <section className='home-section-1' id='home-section-1'>
         <div className='home-section-1-container'>
           <div className='home-section-1-content'>
-            <p>Hi There,</p>
-            <h1>I'm Meet Senjaliya</h1>
+            <div className='home-section-1-content-header'>
+              <p>Hello, <span>It's Me</span></p>
+              <h1>Meet Senjaliya</h1>
+              <h3>And I'm a <span>Web Developer</span></h3>
+            </div>
             <div>I am a Full Stack Web and App Developer focused on creating dynamic, user-friendly, and efficient digital solutions.</div>
-            <button>Contact us</button>
-            <div className='home-section-1-social-icons'>
-              <GitHubIcon className='icons' onClick={
-                () => window.open('https://github.com/Meet57a', '_blank')
-              } />
-              <LinkedInIcon className='icons' onClick={
-                () => window.open('https://www.linkedin.com/in/meet-senjaliya', '_blank')
-              } />
-              <EmailIcon className='icons' onClick={
-                () => window.open('mailto:meetsenjali2018@gmail.com', '_blank')
-              } />
+            <div className='home-section-1-content-clicks'>
+              <button>Contact us</button>
+              <div className='home-section-1-social-icons'>
+                <GitHubIcon className='icons' onClick={
+                  () => window.open('https://github.com/Meet57a', '_blank')
+                } />
+                <LinkedInIcon className='icons' onClick={
+                  () => window.open('https://www.linkedin.com/in/meet-senjaliya', '_blank')
+                } />
+                <EmailIcon className='icons' onClick={
+                  () => window.open('mailto:meetsenjali2018@gmail.com', '_blank')
+                } />
+              </div>
             </div>
           </div>
           <div className='home-section-1-image'></div>
@@ -182,7 +213,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className='home-section-3'>
+      <section className='home-section-3' id='home-section-3'>
         <div className='home-section-3-container'>
           <div className='home-section-3-header'>
             <h1>My <span>Services</span></h1>
@@ -201,7 +232,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className='home-section-4'>
+      <section className='home-section-4' id='home-section-4'>
         <div className='home-section-4-container'>
           <div className='home-section-4-header'>
             <h1>My <span>Skills</span></h1>
@@ -218,7 +249,7 @@ const Home = () => {
           </div>
           <hr />
           <div className='home-section-4-header'>
-            <h1><span>Technologies</span></h1>
+            <h1>Techno<span>logies</span></h1>
             <div className='home-section-4-content'>
               {technologies.map(tech => (
                 <div className='home-section-4-content-card' key={tech.title}>
@@ -232,7 +263,7 @@ const Home = () => {
           </div>
           <hr />
           <div className='home-section-4-header'>
-            <h1><span>Languages</span></h1>
+            <h1>Langu<span>ages</span></h1>
             <div className='home-section-4-content'>
               {languages.map(lang => (
                 <div className='home-section-4-content-card' key={lang.title}>
@@ -242,6 +273,32 @@ const Home = () => {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className='home-section-5' id='contact'>
+        <div className='home-section-5-container'>
+          <h1>Contact <span>Me</span></h1>
+          <div className='home-section-5-content-container'>
+            <form className='home-section-5-content' onSubmit={onSubmit}>
+              <div>
+                <label htmlFor="">Your Name</label>
+                <input type="text"  name='name' required/>
+              </div>
+              <div>
+                <label htmlFor="">Your E-mail</label>
+                <input type="email"  name='email' required/>
+              </div>
+              <div>
+                <label htmlFor="">Write Message</label>
+                <textarea name="message" id="" cols="30" rows="10" ></textarea>
+              </div>
+              <button>Send Message</button>
+              <div>{result}</div>
+            </form>
+            <div className='home-section-5-content-image-container'>
+              <div className='home-section-5-content-image'></div>
             </div>
           </div>
         </div>
