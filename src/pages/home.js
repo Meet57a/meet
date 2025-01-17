@@ -166,6 +166,10 @@ const Home = () => {
       setResult(data.message);
     }
   };
+
+  const handlescroll = () => {
+    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+  }
   return (
     <div className='home'>
       <section className='home-section-1' id='home-section-1'>
@@ -178,7 +182,7 @@ const Home = () => {
             </div>
             <div>I am a Full Stack Web and App Developer focused on creating dynamic, user-friendly, and efficient digital solutions.</div>
             <div className='home-section-1-content-clicks'>
-              <button>Contact us</button>
+              <button onClick={handlescroll}>Contact us</button>
               <div className='home-section-1-social-icons'>
                 <GitHubIcon className='icons' onClick={
                   () => window.open('https://github.com/Meet57a', '_blank')
@@ -208,7 +212,7 @@ const Home = () => {
               <p>I am a passionate Full Stack Web and App Developer with a strong programming background, focused on creating dynamic and user-friendly applications. I specialize in seamlessly integrating front-end and back-end technologies to deliver efficient and engaging solutions.</p>
               <br />
               <p>With a dedication to clean code and innovative problem-solving, I craft scalable, robust, and high-performing digital experiences. My work emphasizes reliability, functionality, and visually appealing designs that make a meaningful impact.</p>
-              <button>Contact us</button>
+              <button onClick={handlescroll}>Contact us</button>
             </div>
           </div>
         </div>
@@ -217,7 +221,7 @@ const Home = () => {
         <div className='home-section-3-container'>
           <div className='home-section-3-header'>
             <h1>My <span>Services</span></h1>
-            <Link to='/services'>View All Services</Link>
+            <Link to='/meet/services'>View All Services</Link>
           </div>
           <div className='home-section-3-content'>
             {services.map((service, index) => (

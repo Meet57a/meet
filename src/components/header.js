@@ -13,7 +13,7 @@ const options = [
     'About',
     'Services',
     'Projects',
-    'Resume',
+    // 'Resume',
     'Contact'
 ];
 
@@ -27,7 +27,7 @@ const Header = () => {
         '/meet/#home-section-2',
         '/meet/services',
         '/meet/projects',
-        '/meet/resume',
+        // '/meet/resume',
         '/meet/#contact'
     ]
 
@@ -109,10 +109,10 @@ const Header = () => {
             </div>
             <div className='header-links'>
                 <Link to='/meet/' onClick={handleActive}>Home</Link>
-                <a href='/meet/#home-section-2'>About</a>
+                <a href='/meet/#home-section-2' >About</a>
                 <Link to='/meet/services' onClick={handleActive}>Services</Link>
                 <Link to='/meet/projects' onClick={handleActive}>Projects</Link>
-                <Link to='/meet/resume' onClick={handleActive}>Resume</Link>
+                {/* <Link to='/meet/resume' onClick={handleActive}>Resume</Link> */}
                 <a href='/meet/#contact'>Contact</a>
             </div>
             <div className='header-mobile-links'>
