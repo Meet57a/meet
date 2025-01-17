@@ -113,7 +113,7 @@ const Header = () => {
                 <Link to='/meet/services' onClick={handleActive}>Services</Link>
                 <Link to='/meet/projects' onClick={handleActive}>Projects</Link>
                 <Link to='/meet/resume' onClick={handleActive}>Resume</Link>
-                <a href='/meet#contact'>Contact</a>
+                <a href='/meet/#contact'>Contact</a>
             </div>
             <div className='header-mobile-links'>
                 <IconButton
