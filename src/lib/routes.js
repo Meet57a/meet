@@ -9,15 +9,15 @@ const routes = createBrowserRouter([
         element: <MainLayout />,
         children: [
             {
-                path: '/',
+                path: '/meet/',
                 element: <Home />,
             },
             {
-                path: '/services',
+                path: '/meet/services',
                 element: <Services />,
             },
             {
-                path: '/projects',
+                path: '/meet/projects',
                 element: <Projects />,
             }
         ]
