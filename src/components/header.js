@@ -23,12 +23,12 @@ const Header = () => {
     const location = useLocation();
     const navigate = useNavigate();
     const click = [
-        '/',
-        '/#home-section-2',
-        '/services',
-        '/projects',
-        '/resume',
-        '/#contact'
+        '/meet/',
+        '/meet/#home-section-2',
+        '/meet/services',
+        '/meet/projects',
+        '/meet/resume',
+        '/meet/#contact'
     ]
 
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -108,12 +108,12 @@ const Header = () => {
                 MEET
             </div>
             <div className='header-links'>
-                <Link to='/' onClick={handleActive}>Home</Link>
-                <a href='/#home-section-2'>About</a>
-                <Link to='/services' onClick={handleActive}>Services</Link>
-                <Link to='/projects' onClick={handleActive}>Projects</Link>
-                <Link to='/resume' onClick={handleActive}>Resume</Link>
-                <a href='#contact'>Contact</a>
+                <Link to='/meet/' onClick={handleActive}>Home</Link>
+                <a href='/meet/#home-section-2'>About</a>
+                <Link to='/meet/services' onClick={handleActive}>Services</Link>
+                <Link to='/meet/projects' onClick={handleActive}>Projects</Link>
+                <Link to='/meet/resume' onClick={handleActive}>Resume</Link>
+                <a href='/meet#contact'>Contact</a>
             </div>
             <div className='header-mobile-links'>
                 <IconButton
