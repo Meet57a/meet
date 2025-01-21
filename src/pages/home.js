@@ -288,22 +288,27 @@ const Home = () => {
             <form className='home-section-5-content' onSubmit={onSubmit}>
               <div>
                 <label htmlFor="">Your Name</label>
-                <input type="text"  name='name' required/>
+                <input type="text" name='name' required />
               </div>
               <div>
                 <label htmlFor="">Your E-mail</label>
-                <input type="email"  name='email' required/>
+                <input type="email" name='email' required />
               </div>
               <div>
                 <label htmlFor="">Write Message</label>
                 <textarea name="message" id="" cols="30" rows="10" ></textarea>
               </div>
               <button>Send Message</button>
+              <div className='contact-details'>
+                  <p>Email: meetsenjali2018@gmail.com</p>
+                  <p>Phone: +91 99042 39048</p>
+              </div>
               <div>{result}</div>
             </form>
             <div className='home-section-5-content-image-container'>
               <div className='home-section-5-content-image'></div>
             </div>
+
           </div>
         </div>
       </section>

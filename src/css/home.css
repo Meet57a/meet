@@ -150,7 +150,6 @@
   transition: all 0.5s ease-in-out;
 }
 
-
 .home-section-1-content button:hover {
   box-shadow: 0 4px 8px 0 rgba(234, 179, 8, 0.2),
     0 6px 20px 0 rgba(234, 179, 8, 0.2);
@@ -203,7 +202,7 @@
   .home-section-1-content h1 {
     font-size: 30px;
   }
-  .home-section-1-content-header h3{
+  .home-section-1-content-header h3 {
     font-size: 20px;
   }
 }
@@ -650,6 +649,13 @@
 .home-section-5-content-image:hover {
   transform: scale(1.01);
   transition: all 0.5s ease-in-out;
+}
+
+.contact-details {
+  
+}
+.contact-details p {
+  color: #6b7280;
 }
 
 /* for mobile screen sizes   */
