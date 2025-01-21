@@ -112,12 +112,13 @@
 
 .home-section-1-image {
   position: relative;
-  width: 50%;
-  height: 90%;
-  background-image: url("/src/assets/myimg.png");
-  background-size: contain;
+  width: 400px;
+  height: 400px;
+  background-image: url("/public/1.png");
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  border-radius: 20px;
 }
 
 .home-section-1-image::before {
@@ -247,20 +248,20 @@
   width: 60%;
   height: 70%;
   border: 10px solid #eab308;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .home-section-2-left-frame-image {
   position: relative;
   width: 100%;
   height: 100%;
-  background-image: url("/src/assets/myimg.png");
+  background-image: url("/public/1.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   left: 20px;
   bottom: 20px;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .home-section-2-left-frame-image:hover {
@@ -629,18 +630,21 @@
 .home-section-5-content-image-container {
   width: 50%;
   height: 100%;
-  padding: 70px;
+  /* padding: 70px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: all 0.3s ease-in-out;
 }
 
 .home-section-5-content-image {
-  width: 100%;
-  height: 100%;
-  background-image: url("/src/assets/myimg.png");
-  background-size: contain;
+  width: 500px;
+  height: 500px;
+  background-image: url("/public/1.png");
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .home-section-5-content-image:hover {
