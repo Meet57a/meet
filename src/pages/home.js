@@ -178,7 +178,7 @@ const Home = () => {
             <div className='home-section-1-content-header'>
               <p>Hello, <span>It's Me</span></p>
               <h1>Meet Senjaliya</h1>
-              <h3>And I'm a <span>Web Developer</span></h3>
+              <h3>And I'm a <span>Web Developer & App Developer</span></h3>
             </div>
             <div>I am a Full Stack Web and App Developer focused on creating dynamic, user-friendly, and efficient digital solutions.</div>
             <div className='home-section-1-content-clicks'>
