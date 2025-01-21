@@ -307,6 +307,10 @@
     0 6px 20px 0 rgba(234, 179, 8, 0.2);
 }
 
+.home-section-2-right-content-contact{
+  /* color: #6b7280; */
+}
+
 /* for mobile screen sizes   */
 @media (max-width: 768px) {
   .home-section-2 {
@@ -651,9 +655,6 @@
   transition: all 0.5s ease-in-out;
 }
 
-.contact-details {
-  
-}
 .contact-details p {
   color: #6b7280;
 }

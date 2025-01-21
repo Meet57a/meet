@@ -212,6 +212,7 @@ const Home = () => {
               <p>I am a passionate Full Stack Web and App Developer with a strong programming background, focused on creating dynamic and user-friendly applications. I specialize in seamlessly integrating front-end and back-end technologies to deliver efficient and engaging solutions.</p>
               <br />
               <p>With a dedication to clean code and innovative problem-solving, I craft scalable, robust, and high-performing digital experiences. My work emphasizes reliability, functionality, and visually appealing designs that make a meaningful impact.</p>
+            
               <button onClick={handlescroll}>Contact us</button>
             </div>
           </div>
@@ -299,10 +300,6 @@ const Home = () => {
                 <textarea name="message" id="" cols="30" rows="10" ></textarea>
               </div>
               <button>Send Message</button>
-              <div className='contact-details'>
-                  <p>Email: meetsenjali2018@gmail.com</p>
-                  <p>Phone: +91 99042 39048</p>
-              </div>
               <div>{result}</div>
             </form>
             <div className='home-section-5-content-image-container'>
